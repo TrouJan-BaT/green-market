@@ -1,18 +1,38 @@
-
 var form = document.getElementById("contactForm");
-var status = document.getElementById("formStatus");
 
-form.onsubmit = function(event) {
+if (form) {
+  var status = document.getElementById("formStatus");
+  var fields = [
+    document.getElementById("contactName"),
+    document.getElementById("contactEmail"),
+    document.getElementById("contactSubject"),
+    document.getElementById("contactMessage")
+  ];
 
-  event.preventDefault();
-  var name = document.getElementById("contactName").value;
-  var email = document.getElementById("contactEmail").value;
-  var subject = document.getElementById("contactSubject").value;
-  var message = document.getElementById("contactMessage").value;
+  function updateFieldColor(field) {
+    field.classList.remove("field-valid", "field-invalid");
+    if (field.value.trim() === "") return;
 
-  if (name == "" || email == "" || subject == "" || message == "") {
-    status.textContent = "Please fill in all the fields.";
-  } else {
-    status.textContent = "Your message is ready, but this website cannot send it yet.";
+    field.classList.add(field.validity.valid ? "field-valid" : "field-invalid");
   }
-};
+
+  fields.forEach(function (field) {
+    field.addEventListener("input", function () {
+      updateFieldColor(field);
+      status.textContent = "";
+    });
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    fields.forEach(function (field) {
+      field.value = field.value.trim();
+      updateFieldColor(field);
+    });
+
+    if (!form.checkValidity()) return;
+
+    status.textContent = "Your message is ready, but this website cannot send it yet.";
+  });
+}

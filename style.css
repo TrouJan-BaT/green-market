@@ -734,6 +734,18 @@ html { scroll-behavior: smooth; }
   border-color: var(--primary);
 }
 
+.contact-form input.field-invalid,
+.contact-form textarea.field-invalid {
+  border: 2px solid #d32f2f;
+  background-color: #fff5f5;
+}
+
+.contact-form input.field-valid,
+.contact-form textarea.field-valid {
+  border: 2px solid #2e7d32;
+  background-color: #f3fbf3;
+}
+
 .contact-form textarea {
   resize: vertical;
 }

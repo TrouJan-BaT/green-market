@@ -36,18 +36,18 @@
           <p>Have a question about our products or your order? Send us a message.</p>
         </div>
 
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" novalidate>
           <label for="contactName">Full name</label>
-          <input id="contactName" name="name" type="text" autocomplete="name" required />
+          <input id="contactName" name="name" type="text" autocomplete="name" minlength="2" maxlength="60" required />
 
           <label for="contactEmail">Email address</label>
           <input id="contactEmail" name="email" type="email" autocomplete="email" required />
 
           <label for="contactSubject">Subject</label>
-          <input id="contactSubject" name="subject" type="text" required />
+          <input id="contactSubject" name="subject" type="text" minlength="3" maxlength="100" required />
 
           <label for="contactMessage">Message</label>
-          <textarea id="contactMessage" name="message" rows="6" required></textarea>
+          <textarea id="contactMessage" name="message" rows="6" minlength="10" maxlength="1000" required></textarea>
 
           <button class="btn" type="submit">Send message</button>
           <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
