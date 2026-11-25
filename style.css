@@ -223,25 +223,6 @@ body {
   color: #a0aec0;
 }
 
-.add-to-cart-btn {
-  width: 100%;
-  background: var(--bg);
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  padding: 10px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.add-to-cart-btn:hover {
-  background: var(--primary);
-  color: white;
-}
-
-/* --- New Styles for Shop Page --- */
-
 /* Page Header / Banner */
 .page-header {
   background:
@@ -267,157 +248,6 @@ body {
   color: #fff;
 }
 
-/* Main Shop Layout (Sidebar + Grid) */
-.shop-container {
-  display: flex;
-  gap: 30px;
-  padding: 50px 8%;
-}
-
-/* Sidebar Filters */
-.shop-sidebar {
-  flex: 1;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  height: fit-content;
-}
-
-.filter-group {
-  margin-bottom: 30px;
-}
-
-.filter-group:last-child {
-  margin-bottom: 0;
-}
-
-.filter-group h3 {
-  font-size: 1.1rem;
-  color: var(--primary);
-  margin-bottom: 15px;
-  border-bottom: 2px solid var(--bg);
-  padding-bottom: 8px;
-}
-
-.search-box {
-  display: flex;
-  border: 1px solid #cbd5e0;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.search-box input {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  outline: none;
-}
-
-.search-box button {
-  background: var(--primary);
-  color: white;
-  border: none;
-  padding: 0 15px;
-  cursor: pointer;
-}
-
-.category-list {
-  list-style: none;
-}
-
-.category-list li {
-  margin-bottom: 10px;
-}
-
-.category-list li a {
-  text-decoration: none;
-  color: var(--text);
-  display: flex;
-  justify-content: space-between;
-  transition: 0.3s;
-}
-
-.category-list li a:hover {
-  color: var(--primary);
-}
-
-.price-filter input[type="range"] {
-  width: 100%;
-  accent-color: var(--primary);
-  cursor: pointer;
-}
-
-.price-filter p {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #718096;
-}
-
-.tags-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tag-item {
-  background: var(--bg);
-  border: 1px solid #cbd5e0;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.tag-item:hover {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-}
-
-/* Shop Content Area */
-.shop-content {
-  flex: 3;
-}
-
-.shop-topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  padding: 15px 20px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.shop-topbar p {
-  color: #718096;
-  font-size: 0.9rem;
-}
-
-.sort-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.sort-box select {
-  padding: 8px 12px;
-  border: 1px solid #cbd5e0;
-  border-radius: 6px;
-  outline: none;
-  background: white;
-  cursor: pointer;
-}
-
-/* Responsive (Mobile view) */
-@media (max-width: 768px) {
-  .shop-container {
-    flex-direction: column;
-  }
-}
 /* --- Why Bio Section Styles --- */
 .why-bio-section {
   padding: 70px 8%;
@@ -648,16 +478,11 @@ body {
   color: var(--primary);
 }
 
-/* --- Added: interactive features --- */
+/* Shared layout helpers */
 html { scroll-behavior: smooth; }
 .why-bio-section, .footer { scroll-margin-top: 70px; }
-.shop-topbar { scroll-margin-top: 90px; }
-.products-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
 .img-box { position: relative; height: 180px; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e8f5e9, #c8e6c9); color: var(--accent); font-size: 3rem; }
 .img-box img { position: absolute; inset: 0; }
-.no-results { grid-column: 1 / -1; text-align: center; color: #718096; padding: 40px 0; }
-.category-list li a.active { color: var(--primary); font-weight: 700; }
-.tag-item.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
 /* Mobile navbar */
 @media (max-width: 768px) {
