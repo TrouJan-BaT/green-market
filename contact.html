@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - GreenMarket</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="logo contact-logo" href="index.html">
+        <i class="fa-solid fa-leaf"></i> Green<span>Market</span>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#about">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h1>Contact Us</h1>
+        <p><a href="index.html">Home</a> <span>/ Contact</span></p>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-intro">
+          <span class="tag">We'd love to hear from you</span>
+          <h2>Get in touch</h2>
+          <p>Have a question about our products or your order? Send us a message.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label for="contactName">Full name</label>
+          <input id="contactName" name="name" type="text" autocomplete="name" required />
+
+          <label for="contactEmail">Email address</label>
+          <input id="contactEmail" name="email" type="email" autocomplete="email" required />
+
+          <label for="contactSubject">Subject</label>
+          <input id="contactSubject" name="subject" type="text" required />
+
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="6" required></textarea>
+
+          <button class="btn" type="submit">Send message</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p>&copy; 2026 GreenMarket Bio. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
